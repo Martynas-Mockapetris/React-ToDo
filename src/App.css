@@ -21,7 +21,9 @@ body {
   width: 100%;
 }
 
-.todo-container {
+.todo-container,
+form.signup,
+form.login {
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
   border-radius: 15px;
@@ -30,6 +32,17 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.1);
   margin-top: 40px;
   min-width: 100%;
+}
+
+.todo-container-log {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 8px 32px 0 rgba(28, 28, 36, 0.37);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: 110px;
+  min-width: 40%;
 }
 
 h1 {
@@ -45,7 +58,8 @@ h1 {
   margin-bottom: 20px;
 }
 
-.todo-input {
+.todo-input,
+form input {
   flex: 1;
   padding: 10px;
   border: none;
@@ -58,6 +72,7 @@ h1 {
   color: rgba(255, 255, 255, 0.7);
 }
 
+button,
 .add-button {
   padding: 10px 20px;
   border: none;
@@ -68,6 +83,7 @@ h1 {
   transition: background 0.3s;
 }
 
+button:hover,
 .add-button:hover {
   background: rgba(255, 255, 255, 0.3);
 }
@@ -99,3 +115,84 @@ h1 {
   background: rgba(255, 0, 0, 0.3);
 }
 
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+nav span {
+  color: white;
+}
+
+.error {
+  background: rgba(255, 0, 0, 0.1);
+  border: 1px solid rgba(255, 0, 0, 0.3);
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+  transition: opacity 0.3s;
+}
+
+h1 {
+  font-size: 30px;
+}
+
+a:hover {
+  opacity: 0.8;
+}
+
+/* Form specific styles */
+.todo-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.todo-form label {
+  color: white;
+  margin-bottom: -10px;
+}
+
+.todo-form h3 {
+  color: white;
+  text-align: center;
+  font-size: 1.8em;
+  margin-bottom: 20px;
+}
+
+.todo-form .todo-input {
+  width: 100%;
+  padding: 12px;
+  box-sizing: border-box;
+}
+
+.todo-form .add-button {
+  width: 100%;
+  margin-top: 10px;
+}
